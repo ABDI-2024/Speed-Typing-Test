@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speed Typing Test</title>
+    <script type="module" src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header Section with Stats -->
+      <header class="header">
+        <!-- WPM Card -->
+        <div class="stat-card">
+          <div class="stat-title">Words Per Minute</div>
+          <div class="stat-value" id="wpm">0</div>
+        </div>
+
+        <!-- Errors Card -->
+        <div class="stat-card">
+          <div class="stat-title">Errors</div>
+          <div class="stat-value" id="errors">0</div>
+        </div>
+
+        <!-- Accuracy Card -->
+        <div class="stat-card">
+          <div class="stat-title">Accuracy</div>
+          <div class="stat-value" id="accuracy">100%</div>
+        </div>
+      </header>
+
+      <!-- Timer Section -->
+      <section class="timer-container">
+        <div class="timer-display">
+          <span class="timer-icon">⏱️</span>
+          <span class="timer-value" id="timer">01:00</span>
+        </div>
+      </section>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Text Display Container -->
+        <div class="text-display-container">
+          <!-- Color Legend -->
+          <div class="color-legend">
+            <div class="legend-item">
+              <div class="legend-color legend-correct"></div>
+              <span class="legend-label">Correct</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color legend-incorrect"></div>
+              <span class="legend-label">Incorrect</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color legend-current"></div>
+              <span class="legend-label">Current</span>
+            </div>
+          </div>
+
+          <!-- Text Display -->
+          <div class="text-display" id="text-display">
+            <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            pariatur, aliquam impedit nisi non et eum ea fugiat cum qui officiis
+            ullam. Minima laboriosam deleniti natus maxime accusamus tempora
+            numquam? -->
+          </div>
+
+          <div class="start-overlay" id="start-overlay">
+            <div class="overlay-content">
+              <span class="overlay-icon">⏸️</span>
+              <div class="overlay-text">Test Not Started</div>
+              <div class="overlay-subtext">
+                Click "Start Test" to begin typing
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+          <button class="btn" id="start-btn">Start Test</button>
+          <button class="btn btn-secondary" id="reset-btn" disabled>
+            RESET
+          </button>
+        </div>
+      </main>
+    </div>
+
+    <template id="completion-popup-template">
+      <div class="popup-overlay" id="completion-popup">
+        <div class="popup">
+          <h2 class="popup-title">Test Completed!</h2>
+
+          <div class="popup-stats">
+            <div class="popup-stat">
+              <div class="popup-stat-value" id="final-wpm">72</div>
+              <div class="popup-stat-label">WPM</div>
+            </div>
+            <div class="popup-stat">
+              <div class="popup-stat-value" id="final-errors">3</div>
+              <div class="popup-stat-label">Errors</div>
+            </div>
+            <div class="popup-stat">
+              <div class="popup-stat-value" id="final-accuracy">94%</div>
+              <div class="popup-stat-label">Accuracy</div>
+            </div>
+          </div>
+
+          <button class="btn" id="restart-test-btn">Restart Test</button>
+        </div>
+      </div>
+    </template>
+  </body>
+</html>
