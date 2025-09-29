@@ -60,7 +60,7 @@ startTestBtn.addEventListener("click", () => {
   resetTestBtn.classList.remove("btn-secondary");
 
   timerRunner();
-  timer = setInterval(timerRunner, 10);
+  timer = setInterval(timerRunner, 1000);
 
   document.addEventListener("keydown", handleInputEvent);
 });
